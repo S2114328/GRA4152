@@ -3,26 +3,37 @@
 #
 
 class Person:
+    ## initialize variables
+    #
     def __init__(self, name = "not provided", YoB = "not provided"):
         self._name = name
         self._YoB = YoB
-           
+    ## print 
+    #       
     def __repr__(self):
         return self._name + " , " + str(self._YoB)
 
+#define the subclass
+
 class Student(Person):
+    ##initialize variables
+    #
     def __init__(self, name = "not provided", YoB = "not provided", major = "not provided"):
         super().__init__(name,YoB)
         self._major = major
-    
+    ## print
+    #
     def __repr__(self):
         return self._name + " , " + str(self._YoB) + " , " + self._major
         
 class Instructor(Person):
+    ## initialize variables
+    #
     def __init__(self, name = "not provided", YoB = "not provided", salary = "not provided"):
         super().__init__(name, YoB)
         self._salary = salary
-    
+    ## print
+    #
     def __repr__(self):
         return self._name + " , " + str(self._YoB) + " , " + self._salary        
 
